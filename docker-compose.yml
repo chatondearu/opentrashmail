@@ -22,5 +22,4 @@ services:
       - WEBHOOK_URL=$WEBHOOK_URL
 
     ports:
-      - '2525:25'
-      - '8080:80'
+      - '25:25'
