@@ -6,20 +6,20 @@ services:
       - './data:/var/www/opentrashmail/data'
       - './logs:/var/www/opentrashmail/logs'
     environment:
-      - URL=http://localhost:8080
-      - DOMAINS=example.com
-      - DATEFORMAT=D.M.YYYY HH:mm
-      - SKIP_FILEPERMISSIONS=true
-      - DISCARD_UNKNOWN=false
-      - ADMIN_ENABLED=true
-      # - ADMIN_PASSWORD=123456
-      # - PASSWORD=123456
-      # - ALLOWED_IPS=192.168.0.0/16,2a02:ab:cd:ef::/60
-      # - ATTACHMENTS_MAX_SIZE=10000000
-      # - MAILPORT_TLS=465
-      # - TLS_CERTIFICATE=cert.pem
-      # - TLS_PRIVATE_KEY=key.pem
-      # - WEBHOOK_URL=https://example.com/webhook
+      - URL=$URL
+      - DOMAINS=$DOMAINS
+      - DATEFORMAT=$DATEFORMAT
+      - SKIP_FILEPERMISSIONS=$SKIP_FILEPERMISSIONS
+      - DISCARD_UNKNOWN=$DISCARD_UNKNOWN
+      - ADMIN_ENABLED=$ADMIN_ENABLED
+      - ADMIN_PASSWORD=$ADMIN_PASSWORD
+      - PASSWORD=$PASSWORD
+      - ALLOWED_IPS=$ALLOWED_IPS
+      - ATTACHMENTS_MAX_SIZE=$ATTACHMENTS_MAX_SIZE
+      - MAILPORT_TLS=$MAILPORT_TLS
+      - TLS_CERTIFICATE=$TLS_CERTIFICATE
+      - TLS_PRIVATE_KEY=$TLS_PRIVATE_KEY
+      - WEBHOOK_URL=$WEBHOOK_URL
 
     ports:
       - '2525:25'
